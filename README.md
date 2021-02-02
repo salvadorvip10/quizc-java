@@ -44,8 +44,11 @@ You have 3 hours for this assignment, the way to submit your work is:
  After that send an email to alejandro.ruiz@fundacion-jala.org with the url of your repository.
  * If you are not familiar with git repositories, you can download the project from the next url:
  https://github.com/Ramir0/quizc-java/archive/main.zip
- To submit your changes, you can zip your project folder and send it to alejandro.ruiz@fundacion-jala.org before the time limit.  
- **NOTE:** Please make sure only include project files. 
+ To submit your changes, you can zip your project folder and send it to *alejandro.ruiz@fundacion-jala.org* and *amir.aranibar@fundacion-jala.org* before the time limit.
+ The email subject must be:
+ *DEV32 - First Name Last Name*
+ 
+ *NOTE:* Please make sure only include project files. 
  
 # NOTE
 To run the application you must have installed OpenJDK-11 and Maven
