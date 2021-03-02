@@ -11,60 +11,54 @@ import com.google.gson.stream.JsonReader;
 
 public class JsonPersistence {
     public static void main(String[] args) {
-        Person person = new Person("Elon", "Musk", 49);
-        writeJsonFile(person);
+        Quest quest = new Quest("Name?", "Salvador");
+        writeJsonFile(quest);
 
-        Person parsedPerson = readJsonFile();
+        Quest parsedPerson = readJsonFile();
         System.out.println(parsedPerson);
     }
 
-    private static Person readJsonFile() {
+    private static Quest readJsonFile() {
         Gson gson = new Gson();
-        Person person = null;
+        Quest quest = null;
         try (JsonReader reader = new JsonReader(new FileReader("./myForm.json"))) {
-            person = gson.fromJson(reader, Person.class);
+            quest = gson.fromJson(reader, Quest.class);
         } catch (IOException exception) {
             exception.printStackTrace();
         }
 
-        return person;
+        return quest;
     }
 
-    public static void writeJsonFile(Person person) {
+    public static void writeJsonFile(Quest quest) {
         Gson gson = new Gson();
         try (Writer writer = new FileWriter("./myForm.json")) {
-            gson.toJson(person, writer);
+            gson.toJson(quest, writer);
         } catch (JsonIOException | IOException exception) {
             exception.printStackTrace();
         }
     }
 
-    public static class Person {
-        private final String name;
-        private final String lastName;
-        private final int age;
+    public static class Quest {
+        private final String question;
+        private final String answer;
 
-        public Person(String name, String lastName, int age) {
-            this.name = name;
-            this.lastName = lastName;
-            this.age = age;
+        public Quest(String question, String answer) {
+            this.question = question;
+            this.answer = answer;
         }
 
-        public String getName() {
-            return name;
+        public String getTittle() {
+            return question;
         }
 
-        public String getLastName() {
-            return lastName;
-        }
-
-        public int getAge() {
-            return age;
+        public String getAnswer() {
+            return answer;
         }
 
         @Override
         public String toString() {
-            return getName() + " " + getLastName() + " : " + getAge();
+            return getTittle() + " " + getAnswer();
         }
     }
 }
