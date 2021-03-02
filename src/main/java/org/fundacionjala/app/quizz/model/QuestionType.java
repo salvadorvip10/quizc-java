@@ -9,7 +9,8 @@ import org.fundacionjala.app.quizz.model.configuration.PickOneConfiguration;
 public enum QuestionType {
     TEXT(1, "Text", new TextConfiguration()),
     DATE(2, "Date", new DateConfiguration()),
-    PICK_ONE(3, "Pick One", new PickOneConfiguration());
+    NUMERIC(3, "Numeric", new DateConfiguration()),
+    PICK_ONE(4, "Pick One", new PickOneConfiguration());
 
     private final int code;
     private final String displayName;

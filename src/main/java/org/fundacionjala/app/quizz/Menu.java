@@ -60,7 +60,7 @@ public class Menu {
     }
 
     private void showMainMenu() {
-        System.out.println("Quizc - A command quiz utility");
+        System.out.println("QuizC - A command quiz utility");
         System.out.println("======================================");
         System.out.println("1. Create quiz");
         System.out.println("2. Fill quiz");
