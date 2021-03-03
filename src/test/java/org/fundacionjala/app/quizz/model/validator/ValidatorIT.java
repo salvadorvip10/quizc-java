@@ -18,4 +18,15 @@ public class ValidatorIT {
         Assert.assertEquals(DateValidator.class, dateValidator.getClass());
         Assert.assertTrue(errors.isEmpty());
     }
+    @Test
+    public void testMinValidator() {
+        List<String> errors = new ArrayList<>();
+        Validator minValidator = ValidatorType.MIN.getValidator();
+
+        minValidator.validate("0", null, errors);
+
+        Assert.assertEquals(MinValidator.class, minValidator.getClass());
+        Assert.assertTrue(errors.isEmpty());
+    }
+
 }
